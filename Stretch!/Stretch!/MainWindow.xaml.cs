@@ -12,10 +12,11 @@ namespace Stretch_
         private readonly TaskbarIcon _icon;
         public MainWindow()
         {
-            InitializeComponent();
             _icon = new TaskbarIcon();
-
-            Timer timer = new Timer(300000);
+            _icon.Icon = Properties.Resources.icon;
+            InitializeComponent();
+            
+            Timer timer = new Timer(1800000);
             timer.Elapsed += _timer_Elapsed;
             timer.Start();
         }
