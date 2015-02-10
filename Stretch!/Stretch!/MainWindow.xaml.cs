@@ -16,7 +16,7 @@ namespace Stretch_
             _icon.Icon = Properties.Resources.icon;
             InitializeComponent();
             
-            Timer timer = new Timer(1800000);
+            Timer timer = new Timer(2100000);
             timer.Elapsed += _timer_Elapsed;
             timer.Start();
         }
