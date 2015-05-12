@@ -17,13 +17,8 @@ namespace Stretch_
             InitializeComponent();
             
             Timer timer = new Timer(1500000);
-            timer.Elapsed += _timer_Elapsed;
+            timer.Elapsed += (sender, e) => _icon.ShowBalloonTip("Stretch!", "Take a break", BalloonIcon.Info);
             timer.Start();
-        }
-
-        void _timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            _icon.ShowBalloonTip("Stretch!", "Take a break", BalloonIcon.Info);
         }
     }
 }
